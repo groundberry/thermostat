@@ -1,6 +1,5 @@
 describe("Thermostat", function() {
   var thermostat;
-});
 
   beforeEach(function() {
     thermostat = new Thermostat();
@@ -27,3 +26,23 @@ describe("Thermostat", function() {
     }
     expect(thermostat.temperature).toBeGreaterThan(9);
   });
+
+  it("sets maximum temperature to 25 when powerSavingMode is on", function() {
+    thermostat.powerSavingMode(true);
+    expect(thermostat.maxTemp).toEqual(25);
+  });
+
+  it("sets maximum temperature to 35 when powerSavingMode is off", function() {
+    thermostat.powerSavingMode(false);
+    expect(thermostat.maxTemp).toEqual(32);
+  });
+
+  it("can't increase temperature over maxTemp", function() {
+    thermostat.powerSavingMode(true);
+    var i;
+    for (i = 0; i < 6; i++) {
+      thermostat.up();
+    }
+    expect(thermostat.temperature).toEqual(25);
+  });
+});
