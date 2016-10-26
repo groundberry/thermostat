@@ -45,4 +45,10 @@ describe("Thermostat", function() {
     }
     expect(thermostat.temperature).toEqual(25);
   });
+
+  it("can reset the temperature to 20 with a reset function", function() {
+    thermostat.up();
+    thermostat.reset();
+    expect(thermostat.temperature).toEqual(20);
+  });
 });
