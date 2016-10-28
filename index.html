@@ -9,12 +9,6 @@
     <header>
       <h1 class="thermostat">THERMOSTAT</h1>
     </header>
-
-    <div  id = "icon">
-    </div>
-    <div id = "weather">
-    </div> <p> °C </p>
-
     <div class="temperature">
       <h2 id="degrees">°C</h2>
       <h2>°C</h2>
@@ -22,9 +16,21 @@
       <button id="temperature-down">DOWN</button>
       <button id="temperature-reset" class="reset-button">RESET</button>
     </div>
+    <div class="local-weather">
+      <div id="icon">
+      </div>
+      <div id="weather">
+      </div>
+      <h2>°C</h2>
+      <div class="city-buttons">
+        <button id="London" class="red city-buttons">LONDON</button>
+        <button id="Seattle" class="city-buttons">SEATTLE</button>
+        <button id="Madrid" class="city-buttons">MADRID</button>
+      </div>
+    </div>
     <div class="power-saving-mode">
       <h2>POWER SAVING MODE</h2>
-      <button id="power_saving-on" class="black">ON</button>
+      <button id="power_saving-on" class="red">ON</button>
       <button id="power_saving-off" class="black">OFF</button>
     </div>
     <div class="energy-usage">

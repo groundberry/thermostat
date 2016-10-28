@@ -48,15 +48,52 @@ $(document).ready(function() {
     };
   }) (jQuery);
 
-  $.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=c558323d2c6e677b42d9fc7b4e2c1741', function(data) {
+  var city = 'London';
+  $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=c558323d2c6e677b42d9fc7b4e2c1741', function(data) {
     $('#weather').text(Math.round((data.main.temp)-273.15));
     var icon = data.weather[0].icon;
     var url = 'http://openweathermap.org/img/w/' + icon + '.png';
-    $("#icon").html("<img src= " + url + "  > ");
-
+    $("#icon").html("<img src= " + url + ">");
   });
 
+  (function( $ ) {
+    $.fn.currentCity = function(city) {
 
+      $('.city-buttons').addClass('black').removeClass('red');
+      $(city).addClass('red').removeClass('black');
+    };
+  }) (jQuery);
 
+  $('#London').click(function() {
+    var city = 'London';
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=c558323d2c6e677b42d9fc7b4e2c1741', function(data) {
+      $('#weather').text(Math.round((data.main.temp)-273.15));
+      var icon = data.weather[0].icon;
+      var url = 'http://openweathermap.org/img/w/' + icon + '.png';
+      $("#icon").html("<img src=" + url + ">");
+      $('#London').currentCity("#"+city);
+    });
+  });
 
+  $('#Seattle').click(function() {
+    var city = 'Seattle';
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=c558323d2c6e677b42d9fc7b4e2c1741', function(data) {
+      $('#weather').text(Math.round((data.main.temp)-273.15));
+      var icon = data.weather[0].icon;
+      var url = 'http://openweathermap.org/img/w/' + icon + '.png';
+      $("#icon").html("<img src=" + url + ">");
+      $('#Seattle').currentCity("#"+city);
+    });
+  });
+
+  $('#Madrid').click(function() {
+    var city = 'Madrid';
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=c558323d2c6e677b42d9fc7b4e2c1741', function(data) {
+      $('#weather').text(Math.round((data.main.temp)-273.15));
+      var icon = data.weather[0].icon;
+      var url = 'http://openweathermap.org/img/w/' + icon + '.png';
+      $("#icon").html("<img src=" + url + ">");
+      $('#Madrid').currentCity("#"+city);
+    });
+  });
 });

@@ -33,12 +33,22 @@ header {
   padding: 0.5em 5em;
 }
 
+#icon {
+  font-size: 3em;
+}
+
+#weather {
+  font-size: 4em;
+}
+
 .reset-button {
   color: #C90002;
 }
 
-.temperature {
+.temperature,
+.local-weather {
   margin: 4em 5em 5em;
+  display: inline-block;
 }
 
 .temperature h2 {
