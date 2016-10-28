@@ -10,23 +10,25 @@
       <h1 class="thermostat">THERMOSTAT</h1>
     </header>
     <div class="temperature">
-      <h2>20°C</h2>
-      <button>UP</button>
-      <button>DOWN</button>
-      <button class="reset-button">RESET</button>
+      <h2 id="degrees">°C</h2>
+      <h2>°C</h2>
+      <button id="temperature-up">UP</button>
+      <button id="temperature-down">DOWN</button>
+      <button id="temperature-reset" class="reset-button">RESET</button>
     </div>
     <div class="power-saving-mode">
       <h2>POWER SAVING MODE</h2>
-      <button>ON</button>
-      <button>OFF</button>
+      <button id="power_saving-on">ON</button>
+      <button id="power_saving-off">OFF</button>
     </div>
     <div class="energy-usage">
       <h2>ENERGY USAGE</h2>
-      <span>LOW</span>
-      <span>MEDIUM</span>
-      <span>HIGH</span>
+      <span id="energy-saving-low">LOW</span>
+      <span id="energy-saving-medium">MEDIUM</span>
+      <span id="energy-saving-high">HIGH</span>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="src/thermostat.js"></script>
+    <script src="interface.js"></script>
   </body>
 </html>
