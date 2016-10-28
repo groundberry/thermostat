@@ -52,8 +52,7 @@ $(document).ready(function() {
     $('#weather').text(Math.round((data.main.temp)-273.15));
     var icon = data.weather[0].icon;
     var url = 'http://openweathermap.org/img/w/' + icon + '.png';
-    $("#icon").html("<img src='" + url +"' > ");
-    console.log(url)
+    $("#icon").html("<img src= " + url + "  > ");
 
   });
 
