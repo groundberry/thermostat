@@ -52,9 +52,14 @@ header {
   margin-top: 2em;
 }
 
-.power-saving-mode button {
+.black {
   background-color: #FFDD23;
   color: black;
+}
+
+.red {
+  background-color: #FFDD23;
+  color: #C90002;
 }
 
 .energy-usage span {
