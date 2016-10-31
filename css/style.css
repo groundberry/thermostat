@@ -41,6 +41,16 @@ header {
   font-size: 4em;
 }
 
+.temperature-buttons {
+  display: block;
+}
+
+.temperature h2,
+#weather,
+.local-weather h2 {
+  display: inline;
+}
+
 .reset-button {
   color: #C90002;
 }
@@ -51,7 +61,9 @@ header {
   display: inline-block;
 }
 
-.temperature h2 {
+.temperature h2,
+.local-weather h2,
+#weather {
   font-size: 6em;
 }
 
